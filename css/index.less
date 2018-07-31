@@ -1,0 +1,62 @@
+@import "base.css";
+.outer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    .container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: skyblue;
+        .trans-one {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3.75rem;
+            height: 3.75rem;
+            border: 1px solid #d7d7d7;
+        }
+        .trans-car {
+            background-color: green;
+        }
+        .trans-air {
+            background-color: red;
+        }
+        .trans-bike {
+            background-color: blue;
+        }
+        .trans-step {
+            background-color: yellow;
+        }
+        .trans-one-modal {
+            opacity: 0;
+        }
+        .undertaking {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 3.75rem;
+            height: 1.875rem;
+            background-color: purple;
+        }
+    }
+    .container1 {
+        z-index: 5;
+    }
+    .container2 {
+        z-index: 10;
+        display: none;
+    }
+    .container3 {
+        z-index: 15;
+        display: none;
+    }
+    .container4 {
+        z-index: 20;
+        display: none;
+    }
+}

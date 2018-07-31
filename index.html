@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>游戏一下</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        var PAGE_MAX_WIDTH = 640,
+            PAGE_MIN_WIDTH = 320,
+            BASE_FONT_SIZE = 32;
+        !function () {
+            var DOC_ROOT_STYLE = document.documentElement.style;
+            var timer = null;
+            window.addEventListener('load', resizeFontSize);
+            window.addEventListener('resize', function () {
+                clearTimeout(timer);
+                if (document.documentElement.clientWidth >= PAGE_MIN_WIDTH) {
+                    timer = setTimeout(resizeFontSize, 0);
+                }
+            });
+            timer = setTimeout(resizeFontSize, 0);
+            resizeFontSize();
+            function resizeFontSize() {
+                DOC_ROOT_STYLE.fontSize = Math.min((document.documentElement.clientWidth) / PAGE_MAX_WIDTH * BASE_FONT_SIZE, BASE_FONT_SIZE) + 'px';
+            }
+        }();
+    </script>
+</head>
+<body>
+    <div class="outer">
+        <div id="container1" class="container container1">1
+            <div class="trans-one trans-one-modal">1</div>
+            <div class="undertaking undertaking1"></div>
+        </div>
+        <div id="container2" class="container container2">2
+            <div class="trans-one trans-one-modal">2</div>
+            <div class="undertaking undertaking2"></div>
+        </div>
+        <div id="container3" class="container container3">3
+            <div class="trans-one trans-one-modal">3</div>
+            <div class="undertaking undertaking3"></div>
+        </div>
+        <div id="container4" class="container container4">4</div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
